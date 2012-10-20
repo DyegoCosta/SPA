@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <title>Jasmine Spec Runner</title>
+
+    <link rel="stylesheet" type="text/css" href="../lib/jasmine-1.2.0/jasmine.css"></link>
+    <script type="text/javascript" src="../lib/jasmine-1.2.0/jasmine.js"></script>
+    <script type="text/javascript" src="../lib/jasmine-1.2.0/jasmine-html.js"></script>  
+    <script type="text/javascript" src="../lib/jasmine-jquery-1.3.1.js"></script>  
+
+    <script type="text/javascript">
+
+        var require = {
+            paths: {
+              domReady: '../lib/require/domReady',
+              views: '../src/views',
+              models: '../src/models',              
+              collections: '../src/collections'
+            }
+        };
+
+    </script>
+
+    <script data-main="../src/bootstrap.js" src="../lib/require/require.js" ></script>
+
+    <script type="text/javascript">
+
+        require(
+            [
+                "../spec/collections/ProductsListSpec",
+                "../spec/views/AppViewSpec",
+                "../spec/views/ProductViewSpec",
+                "../spec/views/ProductsListViewSpec"
+            ],
+            function( document ){
+
+                jasmine.getEnv().addReporter(
+                    new jasmine.HtmlReporter()
+                );
+
+                jasmine.getEnv().execute();
+
+            }
+        );
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>

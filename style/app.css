@@ -1,0 +1,95 @@
+body{
+	background: #EEE;
+}
+
+section#main {
+	margin: auto;
+	padding: 30px;
+	width: 500px;
+	text-align: center;
+	background-color: #fff;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+section#main h1{
+	font-size: 50px;
+}
+
+section#main h2{
+	font-size: 20px;
+}
+
+section#new-product input, section#new-product a{
+	margin: 0px 2px 0px;
+}
+
+section#new-product input[type="text"]{
+	width: 50%;
+}
+
+section#new-product input[type="number"]{
+	width: 10%;
+}
+
+section#products ol{
+	text-align: justify;
+	width: 350px;
+	margin: 15px auto;
+	font-size: 16px;
+}
+
+section#products ol li{
+	padding: 20px 0px 5px;
+	border-bottom: solid 1px #EEE;
+}
+
+section#products ol li span{
+	float:right;
+}
+
+section#products ol li div.product-options{	
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 360px;
+}
+
+section#products ol li div.product-options a{	
+    cursor: pointer;
+    margin-right: 2px;
+}
+
+li input.new-title {
+	display: none;
+}
+
+li.editing input.new-title {
+	display: block;	
+    position: absolute;
+    margin: -27px 0px;
+    width: 300px;
+}
+
+li.editing div.product-options {
+	display: none;
+}
+
+.out-of-stock{
+	color:#B94A48;
+}
+
+.out-of-stock span.badge{
+	background-color:#B94A48;
+}
+
+.running-out{
+	color: #F89406;
+}
+
+.running-out span.badge{
+	background-color: #F89406;
+}
