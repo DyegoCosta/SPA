@@ -18,11 +18,11 @@ define(['views/ProductsListView', 'collections/ProductsList', 'models/Product'],
 		});
 
 		it('should append a list item when add and item to the collection', function(){
-			spyOn(productsListView, 'addProduct');			
-			productsListView.delegateEvents();
+			spyOn(productsListView, 'addProduct');
+			
 			var product = new Product({ title: 'some title', quantity: 10 });
 
-			productsListView.collection.add(product);
+			productsListView.addProduct(product);
 
 			expect(productsListView.addProduct).toHaveBeenCalledWith(product);
 		});
